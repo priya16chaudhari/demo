@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from designreset.com/cork/ltr/demo8/auth_register_boxed.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2020 04:46:40 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Student Register</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/authentication/regcss.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="assets/css/forms/theme-checkbox-radio.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/forms/switches.css">
+
+    <!-- Date -->
+    <link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+  <link href="plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css">
+
+<!-- 
+fileupload -->
+  <link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css" />
+
+   <script src="js1/angular.min.js"></script>  
+   <script src="js1/angular-animate.min.js"></script>
+   <script src="js1/angular-aria.min.js"></script>
+   <script src="js1/angular-messages.min.js"></script>
+   <script src="js1/angular-material.min.js"></script> 
+   <script src="js1/angular-ui-router.min.js"></script>
+
+   <script type="text/javascript" src="js1/smart-table.min.js"></script>
+   <script type="text/javascript" src="js1/angular-sanitize.min.js"></script>
+   <script type="text/javascript" src="js1/ui-bootstrap-tpls.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+  <script type="text/javascript" src="studentRegister.js"></script>
+
+</head>
+<body class="form">
+    <div ng-app="studentregisterapp" ng-controller="studentregistercntrl">
+
+
+    <div class="form-container outer">
+        <div class="form-form">
+            <div class="form-form-wrap">
+                <div class="form-container" style="margin-top: 47px;margin-bottom: 57px;">
+                    <div class="form-content">
+
+                        <h1 class="">Register</h1>
+                        <p class="signup-link register">Already have an account? <a href="studentLogin.html">Log in</a></p>
+                        <form class="text-left">
+                            <div class="form">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div id="username-field" class="field-wrapper input">
+                                    <label for="username">First Name</label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    <input id="username" name="username" type="text" class="form-control" placeholder="First Name" ng-model="loginobj.studfirstName">
+                                </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div id="email-field" class="field-wrapper input">
+                                    <label for="email">Last Name</label>
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    <input id="email" name="email" type="text" value="" class="form-control" placeholder="Last Name"  ng-model="loginobj.studlastName">
+                                </div>
+                                </div>
+
+                              </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div id="email-field" class="field-wrapper input">
+                                    <label for="email">BirthDate</label>
+                            
+                                    <input id="basicFlatpickr" value="2019-09-04" class="form-control flatpickr flatpickr-input active" type="text" placeholder="Select Date.."  ng-model="loginobj.studDob">
+                                </div>
+              </div>
+
+              <div class="col-md-6"> 
+                <div id="email-field" class="field-wrapper input">
+                                    <label for="email">EMAIL</label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign register"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
+                                    <input id="email" name="email" type="text" value="" class="form-control" placeholder="Email"  ng-model="loginobj.studEmail">
+                                </div>
+              </div>
+            </div> 
+
+            <div class="row">
+              <div class="col-md-6">
+                 <div id="email-field" class="field-wrapper input">
+                                         <label for="inputState">Phone Number</label>
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                           <input id="email" name="email" type="text" value="" class="form-control" placeholder="Enter Phone Number"  ng-model="loginobj.studPhone" maxlength="10">
+                                </div>
+              </div>
+              <div class="col-md-6">
+                
+                                <div id="email-field" class="field-wrapper input">
+                                         <label for="inputState">Gender</label>
+                                            <select id="inputState" ng-model="loginobj.studGender" class="form-control">
+                                               <!--  <option selected>Choose...</option> -->
+                                                <option ng-repeat="gender in genderlist">{{gender}}</option>
+                                            </select>
+                                </div>
+              </div>
+            </div> 
+
+            <div class="row">
+              <div class="col-md-6">
+                 <div id="email-field" class="field-wrapper input">
+                                         <label for="inputState">Department</label>
+                                            <select id="inputState" class="form-control" ng-model="loginobj.studDept">
+                                               
+                                                <option ng-repeat="department in departmentlist">
+                                                    {{department}}</option>
+                                            </select>
+                                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div id="email-field" class="field-wrapper input">
+                                         <label for="inputState">Academic Year</label>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                           <input id="email" name="email" type="text" value="" class="form-control" placeholder="FY/SY"  ng-model="loginobj.studYear">
+                                </div>
+              </div>
+            </div>
+
+            <!-- <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                 <div class="custom-file-container" data-upload-id="myFirstImage">
+                                        <label  for="inputState">Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+                                        <label class="custom-file-container__custom-file" >
+                                            <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*" ng-model="loginobj.gender1">
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                                            <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                        </label>
+                                        <div class="custom-file-container__image-preview"></div>
+                                </div>
+              </div>
+
+              <div class="col-md-6">
+              </div>
+            </div>  -->
+
+            <div class="field-wrapper terms_condition">
+                                    <div class="n-chk">
+                                        <label class="new-control new-checkbox checkbox-primary">
+                                          <input type="checkbox" class="new-control-input">
+                                          <span class="new-control-indicator"></span><span>
+                                            By raising request, you agree with the   terms of service and privacy policy </span>
+                                        </label>
+                                    </div>
+
+             </div>
+
+              <div class="row">
+                 <div class="col-md-4"></div>
+                <div class="col-md-4">
+                            <div class="field-wrapper">
+                                        <button type="submit" class="btn btn-primary" ng-click="go(loginobj)">Register</button>
+                            </div>
+                            <!-- <div class="widget-content  text-center">
+                                <button id="" class="mr-2 btn btn-primary message" ng-click="go(loginobj)">Register</button>
+                                    </div> -->
+                 </div>           
+            </div>
+
+                                   
+                            </div>
+
+                    
+                        </form>
+
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/authentication/form-2.js"></script>
+
+    <!-- Date -->
+      <script src="plugins/flatpickr/flatpickr.js"></script>
+ <script src="plugins/flatpickr/custom-flatpickr.js"></script>
+<!-- <script src="plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="plugins/sweetalerts/custom-sweetalert.js"></script> -->
+<!-- 
+imageuplaod -->
+  <script src="plugins/file-upload/file-upload-with-preview.min.js"></script>
+</body>
+
+<!-- Mirrored from designreset.com/cork/ltr/demo8/auth_register_boxed.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2020 04:46:40 GMT -->
+</html>
